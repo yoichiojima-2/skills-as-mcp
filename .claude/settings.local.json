@@ -30,7 +30,9 @@
       "Bash(GIT_SSH_COMMAND=\"ssh -i ~/.ssh/id_ed25519_personal -o IdentitiesOnly=yes\" git -C /Users/yo/Developer/repo/skills-as-mcp push -u origin main)",
       "Bash(uv run python:*)",
       "Bash(git commit:*)",
-      "Bash(GIT_SSH_COMMAND=\"ssh -i ~/.ssh/id_ed25519_personal -o IdentitiesOnly=yes\" git push:*)"
+      "Bash(GIT_SSH_COMMAND=\"ssh -i ~/.ssh/id_ed25519_personal -o IdentitiesOnly=yes\" git push:*)",
+      "Bash(gh run list:*)",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ]
   }
 }

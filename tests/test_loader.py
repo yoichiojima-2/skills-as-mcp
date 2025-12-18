@@ -25,7 +25,6 @@ def test_load_metadata_hello_world(loader: SkillLoader, skills_dir: Path):
     assert metadata is not None
     assert metadata.name == "hello-world"
     assert "example skill" in metadata.description.lower()
-    assert metadata.has_tools is False
 
 
 def test_load_content_hello_world(loader: SkillLoader, skills_dir: Path):
@@ -46,10 +45,18 @@ def test_load_skill_full(loader: SkillLoader, skills_dir: Path):
     assert skill is not None
     assert skill.metadata.name == "hello-world"
     assert skill.content is not None
-    assert skill.tools == []
 
 
 def test_load_metadata_invalid_dir(loader: SkillLoader, tmp_path: Path):
     """Test loading metadata from directory without SKILL.md."""
     metadata = loader.load_metadata(tmp_path)
     assert metadata is None
+
+
+def test_discover_scripts(loader: SkillLoader, skills_dir: Path):
+    """Test that scripts/ directory is discovered as resources."""
+    skill_path = skills_dir / "code-review"
+    content = loader.load_content(skill_path)
+
+    assert "scripts/analyze_complexity.py" in content.resources
+    assert "scripts/check_style.py" in content.resources

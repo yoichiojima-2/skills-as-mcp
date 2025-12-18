@@ -3,11 +3,6 @@ name: code-review
 description: |
   Review code for quality, bugs, security issues, and best practices.
   Use this skill when the user asks for code review, code analysis, or wants feedback on their code.
-arguments:
-  - name: language
-    description: Programming language of the code
-    required: false
-    default: python
 ---
 
 # Code Review Skill
@@ -23,13 +18,24 @@ When reviewing code, check for:
 4. **Readability** - Is the code clear and maintainable?
 5. **Best Practices** - Does it follow language conventions?
 
-## Available Tools
+## Available Scripts
 
-- `analyze_complexity`: Analyze code complexity metrics
-- `check_style`: Check code style issues
+Run these from the skill's base_path:
+
+```bash
+# Analyze code complexity
+python scripts/analyze_complexity.py <file>
+# or via stdin
+cat <file> | python scripts/analyze_complexity.py
+
+# Check code style
+python scripts/check_style.py <file>
+# or via stdin
+cat <file> | python scripts/check_style.py
+```
 
 ## Usage
 
-1. Call `analyze_complexity` to get metrics
-2. Call `check_style` for style issues
+1. Run `analyze_complexity.py` to get metrics
+2. Run `check_style.py` for style issues
 3. Provide comprehensive feedback based on the results
