@@ -23,7 +23,13 @@
       "Bash(git -C /Users/yo/Developer/repo/skills-as-mcp status)",
       "Bash(git remote add:*)",
       "Bash(git add:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial implementation of skills-as-mcp\n\nAdd MCP server that provides Claude Skills-like lazy-loading via:\n- Bridge layer with list_skills and load_skill MCP tools\n- SKILL.md parser with YAML frontmatter support\n- Skill registry for multi-directory discovery\n- Example hello-world skill\nEOF\n\\)\")"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial implementation of skills-as-mcp\n\nAdd MCP server that provides Claude Skills-like lazy-loading via:\n- Bridge layer with list_skills and load_skill MCP tools\n- SKILL.md parser with YAML frontmatter support\n- Skill registry for multi-directory discovery\n- Example hello-world skill\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git -C /Users/yo/Developer/repo/skills-as-mcp log -1 --format='%an <%ae>')",
+      "Bash(git -C /Users/yo/Developer/repo/skills-as-mcp remote set-url origin git@github.com:yoichiojima-2/skills-as-mcp.git)",
+      "Bash(GIT_SSH_COMMAND=\"ssh -i ~/.ssh/id_ed25519_personal -o IdentitiesOnly=yes\" git -C /Users/yo/Developer/repo/skills-as-mcp push -u origin main)",
+      "Bash(uv run python:*)",
+      "Bash(git commit:*)"
     ]
   }
 }

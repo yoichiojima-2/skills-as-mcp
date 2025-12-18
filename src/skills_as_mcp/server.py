@@ -7,6 +7,7 @@ from mcp.server.fastmcp import FastMCP
 from skills_as_mcp.config import load_config
 from skills_as_mcp.core.registry import SkillRegistry
 from skills_as_mcp.mcp.bridge import setup_bridge_tools
+from skills_as_mcp.mcp.prompts import setup_prompts
 
 
 def create_server() -> FastMCP:
@@ -21,6 +22,7 @@ def create_server() -> FastMCP:
     registry.discover()
 
     setup_bridge_tools(mcp, registry)
+    setup_prompts(mcp, registry)
 
     return mcp
 

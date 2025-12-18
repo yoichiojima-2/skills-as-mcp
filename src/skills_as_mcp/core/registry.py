@@ -69,6 +69,20 @@ class SkillRegistry:
         """Get skill metadata by name."""
         return self._skills.get(name)
 
+    def refresh(self) -> None:
+        """Re-scan directories for skill changes."""
+        self.discover()
+
+    @property
+    def skill_count(self) -> int:
+        """Return number of discovered skills."""
+        return len(self._skills)
+
+    @property
+    def skill_names(self) -> list[str]:
+        """Return list of all skill names."""
+        return list(self._skills.keys())
+
     def _infer_source(self, path: Path) -> str:
         """Infer source type from path."""
         path_str = str(path)
