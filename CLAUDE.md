@@ -1,0 +1,30 @@
+# Development Guidelines
+
+## Code Style
+- Line length: 120 characters
+- Use `uv run ruff check --fix src/` and `uv run ruff format src/` before committing
+- Python 3.13+ features are encouraged (type unions `|`, match statements)
+
+## Testing
+- Always write tests for new functionality
+- Run tests with `uv run pytest`
+- Test files go in `tests/` directory
+
+## Workflow
+- Commit frequently with clear messages
+- Keep changes minimal and focused
+- Prefer editing existing files over creating new ones
+
+## Package Management
+- Use `uv` for dependency management
+- Run `uv sync --dev` to install dependencies
+- Add new dependencies to `pyproject.toml`
+
+## Project Structure
+```
+src/skills_as_mcp/     # Main package
+  core/                # Data models, loader, registry
+  mcp/                 # MCP protocol handlers
+skills/                # Example/test skills
+tests/                 # Test files
+```

@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:spec.modelcontextprotocol.io)",
+      "WebFetch(domain:www.speakeasy.com)",
+      "WebFetch(domain:docs.claude.com)",
+      "WebFetch(domain:mikhail.io)",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:leehanchung.github.io)",
+      "WebFetch(domain:tylerfolkman.substack.com)",
+      "WebFetch(domain:composio.dev)",
+      "WebFetch(domain:portkey.ai)",
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:gofastmcp.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:pypi.org)",
+      "Bash(uv sync:*)",
+      "Bash(uv run ruff:*)",
+      "Bash(uv run python -m ruff check:*)",
+      "Bash(uv pip install:*)",
+      "Bash(uv run pytest:*)",
+      "Bash(git -C /Users/yo/Developer/repo/skills-as-mcp status)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial implementation of skills-as-mcp\n\nAdd MCP server that provides Claude Skills-like lazy-loading via:\n- Bridge layer with list_skills and load_skill MCP tools\n- SKILL.md parser with YAML frontmatter support\n- Skill registry for multi-directory discovery\n- Example hello-world skill\nEOF\n\\)\")"
+    ]
+  }
+}
